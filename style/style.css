@@ -121,13 +121,37 @@ header .line {
         opacity: 0;
     }
 
+    header .line {
+        display: none;
+    }
+
     .menu-list {
         display: flex;
-        flex-direction: row;
         align-items: center;
-        max-height: 400px;
-        position: relative;
+        justify-self: flex-end;
+        max-height: 80px;
+        position: absolute;
         top: 0;
+        background-color: inherit;
+    }
+
+    .menu-list li {
+        width: 180px;
+    }
+
+    .menu-list li a {
+        color: white;
+    }
+
+    .menu-list li a:hover {
+        color: rgba(0, 81, 255, 0.9);
+    }
+
+    .menu-list .sign-btn-gp {
+        display: flex;
+        flex-direction: row;
+        width: 360px;
+        height: 100%;
     }
 
     /* .menu-list .sign-btn-gp {
