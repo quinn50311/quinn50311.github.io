@@ -121,6 +121,10 @@ header .line {
         opacity: 0;
     }
 
+    header {
+        width: 70%;
+    }
+
     header .line {
         display: none;
     }
@@ -128,7 +132,7 @@ header .line {
     .menu-list {
         display: flex;
         align-items: center;
-        justify-self: flex-end;
+        justify-content: flex-end;
         max-height: 80px;
         position: absolute;
         top: 0;
@@ -148,14 +152,18 @@ header .line {
     }
 
     .menu-list .sign-btn-gp {
+        margin: 0 0 0 calc(100% / 8);
         display: flex;
         flex-direction: row;
         width: 360px;
         height: 100%;
     }
 
-    /* .menu-list .sign-btn-gp {
-        display: flex;
-        flex-direction: row;
-    } */
+    .menu-list .sign-btn-gp {
+        flex-shrink: 4;
+    }
+
+    .sign-btn-gp .sign-in-btn {
+        background-color: inherit;
+    }
 }
