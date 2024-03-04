@@ -1,19 +1,89 @@
 html,
 body {
-    background-color: white;
+    background-color: black;
+}
+
+header {
+    background-color: black;
+    height: 150px;
 }
 
 header #menu-btn {
     display: none;
 }
 
-header .header-list {
-    position: absolute;
+header label {
+    display: none;
+}
+
+.header-list {
+    /* position: absolute;
     top: 0;
     left: 160px;
-    height: 150px;
+    width: 100%;
+    height: 300px;
     display: flex;
-    align-items: center;
+    align-items: center; */
+}
+
+.bird-logo {
+    position: relative;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-color: white;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+}
+
+.bird-logo .bird-head-white {
+    position: absolute;
+    top: 35%;
+    left: 27.5%;
+    background-color: white;
+    border-radius: 90% 50% 75% 0;
+    width: 90px;
+    height: 60px;
+    z-index: 2;
+}
+
+.bird-logo .bird-head {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-color: black;
+    border-radius: 68% 50% 65% 0;
+    width: 90px;
+    height: 90px;
+}
+
+.bird-logo .bird-mouth {
+    position: absolute;
+    top: 42%;
+    right: 17%;
+    background-color: black;
+    border-radius: 0% 120% 0% 0%;
+    width: 25px;
+    height: 15px;
+    transform: rotate(-7deg);
+    z-index: 10;
+}
+
+.bird-logo .bird-eye {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 55%;
+    margin: auto;
+    background-color: black;
+    border-radius: 60%;
+    width: 20px;
+    height: 20px;
+    z-index: 3;
 }
 
 @media screen and (max-width: 760px) {
@@ -22,8 +92,7 @@ header .header-list {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        height: 150px;
-        background-color: gray;
+        background-color: black;
     }
 
     header .pic {
@@ -33,7 +102,7 @@ header .header-list {
         position: relative;
     }
 
-    header .pic img {
+    .pic img {
         position: relative;
         top: 5px;
         vertical-align: middle;
@@ -51,42 +120,164 @@ header .header-list {
         height: 50px;
     }
 
-    header .menu-line::before {
-        position: absolute;
-        top: 22.5px;
-        left: 0;
+    header .menu-line,
+    header .menu-line::before,
+    header .menu-line::after {
         content: '';
         display: block;
-        width: 50px;
-        height: 5px;
+        width: 40px;
+        height: 2px;
+        position: absolute;
+        left: 0;
         border-radius: 10px;
         background-color: white;
-        box-shadow: 0 15px 0 0 white, 0 -15px 0 0 white;
+        transition: 0.2s;
     }
 
-    header .header-list {
+    header .menu-line {
+        top: 22.5px;
+    }
+
+    header .menu-line::before {
+        top: 14px;
+    }
+
+    header .menu-line::after {
+        top: -14px;
+    }
+
+    .header-list {
+        height: 0;
+        transition: height 0.5s ease-in;
         position: absolute;
         top: 150px;
         left: 0;
         width: 100%;
         flex-direction: column;
+        background-color: gainsboro;
     }
 
-    header .header-list li {
+    .header-list li {
         width: 100%;
-        line-height: 50px;
-        background-color: greenyellow;
+        height: 60px;
         text-align: center;
+        position: relative;
+        opacity: 0;
+        overflow: hidden;
+        transition: 0.5s ease-in;
     }
 
-    header .header-list li a {
+    .header-list li + li::before {
+        content: '';
+        display: block;
+        width: 90%;
+        height: 1px;
+        position: relative;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        background-color: black;
+    }
+
+    .header-list li a {
         display: block;
         width: 100%;
+        line-height: 60px;
+        text-decoration: none;
+        color: black;
+        font-size: 1.2rem;
+        font-weight: bold;
     }
 
-    header .header-list li ~ header .header-list li {
+    .header-list li a:hover {
+        /* background-color: rgb(49, 49, 49); */
+        color: rgba(54, 54, 54, 0.5);
+    }
+
+    #menu-btn:checked ~ label .menu-line {
+        background-color: transparent;
+    }
+
+    #menu-btn:checked ~ label .menu-line::before {
+        transform: rotate(-45deg);
+        top: 0;
+    }
+
+    #menu-btn:checked ~ label .menu-line::after {
+        transform: rotate(45deg);
+        top: 0;
+    }
+
+    #menu-btn:checked ~ .header-list li {
+        opacity: 1;
+        overflow: hidden;
+        transition: 0.5s ease-in;
     }
 
     #menu-btn:checked ~ .header-list {
+        height: 300px;
+        overflow: hidden;
+        transition: 0.5s ease-in;
+    }
+
+    .bird-logo {
+        position: relative;
+        left: 0;
+        right: 0;
+        margin: auto;
+        background-color: white;
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+    }
+
+    .bird-logo .bird-head-white {
+        position: absolute;
+        top: 35%;
+        left: 27.5%;
+        background-color: white;
+        border-radius: 90% 50% 75% 0;
+        width: 45px;
+        height: 30px;
+        z-index: 2;
+    }
+
+    .bird-logo .bird-head {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        background-color: black;
+        border-radius: 68% 50% 65% 0;
+        width: 45px;
+        height: 45px;
+    }
+
+    .bird-logo .bird-mouth {
+        position: absolute;
+        top: 42%;
+        right: 17%;
+        background-color: black;
+        border-radius: 0% 120% 0% 0%;
+        width: 12.5px;
+        height: 7.5px;
+        transform: rotate(-7deg);
+        z-index: 10;
+    }
+
+    .bird-logo .bird-eye {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 55%;
+        margin: auto;
+        background-color: black;
+        border-radius: 60%;
+        width: 10px;
+        height: 10px;
+        z-index: 3;
     }
 }
