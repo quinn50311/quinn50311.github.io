@@ -119,3 +119,17 @@ nav a ~ a {
 }
 
 /* 漢堡選單點選後 End */
+
+@media (min-width: 768px) {
+    .menu-btn {
+        display: none;
+    }
+
+    nav {
+        flex-direction: row;
+    }
+
+    nav a ~ a {
+        margin-top: 0;
+    }
+}
