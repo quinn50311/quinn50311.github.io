@@ -49,8 +49,8 @@ nav {
 .wrap input[type="date"],
 .wrap input[type="time"] {
     font-size: 14px;
+    max-width: 80px;
     width: 50%;
-    max-width: 190px;
     height: 25px;
     padding: 5px 10px;
     outline-style: none;
