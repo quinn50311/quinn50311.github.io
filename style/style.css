@@ -17,9 +17,8 @@ header {
 .logo {
     width: 200px;
     height: 80px;
-    position: absolute;
-    top: 10px;
-    left: 10px;
+    line-height: 100px;
+    margin-left: 10px;
 }
 
 .logo img {
@@ -125,8 +124,31 @@ nav a ~ a {
         display: none;
     }
 
+    header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .logo a {
+        display: block;
+        height: 80px;
+    }
+
     nav {
+        position: relative;
+        top: 0;
+        max-height: none;
         flex-direction: row;
+        border: none;
+        width: auto;
+        height: auto;
+    }
+
+    nav a {
+        width: auto;
+        height: auto;
+        line-height: 100px;
+        padding: 0 30px;
     }
 
     nav a ~ a {
