@@ -112,7 +112,7 @@ nav a ~ a {
 
 #menu-control:checked ~ header nav {
     padding: 20px 0;
-    max-height: 300px;
+    max-height: 350px;
     transition: 0.3s ease-in;
     overflow: hidden;
 }

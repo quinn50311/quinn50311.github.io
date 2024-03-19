@@ -13,6 +13,7 @@ let hrEl = document.getElementById('hr-input');
 let minEl = document.getElementById('min-input');
 let secEl = document.getElementById('sec-input');
 let calcEl = document.querySelector('.calc');
+let outputWrapEl = document.querySelector('.final-wrap');
 let outputEl = document.querySelector('.final-date');
 
 // set init value for all el
@@ -34,6 +35,8 @@ function calculate() {
         .format('YYYY-MM-DD HH:mm:ss');
 
     outputEl.innerHTML = finalDate;
+
+    outputWrapEl.style.opacity = '1';
 }
 
 (function () {

@@ -6,8 +6,12 @@ nav {
 
 .container {
     width: 100%;
+    height: 1080px;
     margin: auto;
-    background-color: #ccc;
+    background-image: url('/assets/calc-background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .now-container,
@@ -38,6 +42,7 @@ nav {
 
 .wrap label {
     width: 20%;
+    color: #000;
 }
 
 .wrap input {
@@ -78,9 +83,11 @@ nav {
 }
 
 .final-wrap {
+    opacity: 0;
     width: 100%;
     height: 50px;
-    border: 1px solid #666;
+    background-color: #fff;
+    border-radius: 5px;
 }
 
 .final-date {
@@ -89,6 +96,7 @@ nav {
     letter-spacing: 0.1rem;
     line-height: 50px;
     padding: 10px;
+    color: #000;
 }
 
 @media screen and (min-width: 768px) {
