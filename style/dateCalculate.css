@@ -45,12 +45,10 @@ nav {
     color: #000;
 }
 
-.wrap input,
-.wrap input[type="date"],
-.wrap input[type="time"] {
+.wrap input {
     font-size: 14px;
     width: 50%;
-    max-width: 120px;
+    max-width: 100px;
     height: 25px;
     padding: 5px 10px;
     outline-style: none;
