@@ -106,6 +106,10 @@ nav {
     .wrap label {
         width: 50px;
     }
+
+    .wrap:nth-child(even) label {
+        margin-left: 10px;
+    }
     
     .wrap input,
     .wrap input[type="date"],
@@ -118,10 +122,36 @@ nav {
         border-style: none;
         border-radius: 5px;
     }
+
+    .calc {
+        font-size: 16px;
+        font-weight: normal;
+        width: 100px;
+        height: 40px;
+        margin: 50px 0;
+    }
 }
 
 @media screen and (min-width: 768px) {
     .wrap label {
         width: 10%;
+    }
+}
+
+@media screen and (min-width: 1100px) {
+    .wrap label {
+        width: 10%;
+    }
+    
+    .wrap input,
+    .wrap input[type="date"],
+    .wrap input[type="time"] {
+        font-size: 14px;
+        width: 50%;
+        height: 25px;
+        padding: 5px 10px;
+        outline-style: none;
+        border-style: none;
+        border-radius: 5px;
     }
 }
