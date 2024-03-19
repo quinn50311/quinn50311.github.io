@@ -74,6 +74,9 @@ nav {
     transition: 0.3s ease-in;
     overflow: hidden;
     box-sizing: border-box;
+    background-color: white;
+    z-index: 99;
+    overflow: hidden;
 }
 
 nav a {
@@ -118,6 +121,14 @@ nav a ~ a {
 }
 
 /* 漢堡選單點選後 End */
+
+footer {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background-color: #fff;
+}
 
 @media screen and (min-width: 768px) {
     .menu-btn {
