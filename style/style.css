@@ -119,7 +119,7 @@ nav a ~ a {
 
 /* 漢堡選單點選後 End */
 
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
     .menu-btn {
         display: none;
     }
@@ -148,10 +148,23 @@ nav a ~ a {
         width: auto;
         height: auto;
         line-height: 100px;
-        padding: 0 30px;
+        padding-right: 30px;
     }
 
     nav a ~ a {
         margin-top: 0;
+    }
+}
+
+@media screen and (min-width: 1090px) {
+    nav a {
+        padding: 0 30px;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    nav a {
+        padding: 0 50px;
+        font-size: 20px;
     }
 }
