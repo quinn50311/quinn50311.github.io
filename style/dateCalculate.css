@@ -50,6 +50,7 @@ nav {
 .wrap input[type="time"] {
     font-size: 14px;
     width: 50%;
+    max-width: 190px;
     height: 25px;
     padding: 5px 10px;
     outline-style: none;
