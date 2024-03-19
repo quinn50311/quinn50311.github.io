@@ -1,0 +1,98 @@
+nav {
+    background-color: white;
+    z-index: 99;
+    overflow: hidden;
+}
+
+.container {
+    width: 100%;
+    margin: auto;
+    background-color: #ccc;
+}
+
+.now-container,
+.calc-container {
+    width: 90%;
+    padding: 30px 0 20px 0;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.calc-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.calc-container:last-child {
+    justify-content: center;
+}
+
+.wrap {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrap label {
+    width: 20%;
+}
+
+.wrap input {
+    font-size: 14px;
+    width: 50%;
+    height: 25px;
+    padding: 5px 10px;
+    outline-style: none;
+    border-style: none;
+    border-radius: 5px;
+}
+
+.wrap input:focus {
+    border: 1px solid #666;
+}
+
+.calc-container .wrap:first-child,
+.calc-container .wrap:nth-child(2) {
+    margin-bottom: 30px;
+}
+
+.calc {
+    border-style: none;
+    border-radius: 5px;
+    border: 1px solid #666;
+    padding: 5px;
+    margin: 30px 0;
+    width: 50px;
+    letter-spacing: 3px;
+    text-align: center;
+}
+
+.calc:hover {
+    cursor: pointer;
+    background-color: #666;
+    border: 1px solid #aaa;
+    color: white;
+}
+
+.final-wrap {
+    width: 100%;
+    height: 50px;
+    border: 1px solid #666;
+}
+
+.final-date {
+    font-size: 16px;
+    font-weight: 550;
+    letter-spacing: 0.1rem;
+    line-height: 50px;
+    padding: 10px;
+}
+
+@media screen and (min-width: 768px) {
+    .wrap label {
+        width: 10%;
+    }
+}
