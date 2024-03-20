@@ -1,39 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        />
+        <link
+            rel="stylesheet"
+            href="./style/reset.css"
+        />
+        <link
+            rel="stylesheet"
+            href="./style/style.css"
+        />
+        <title>我的練習紀錄</title>
+    </head>
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style/reset.css" />
-    <link rel="stylesheet" href="./style/style.css" />
-    <title>我的練習紀錄</title>
-</head>
+    <body>
+        <input
+            type="checkbox"
+            id="menu-control"
+        />
+        <input
+            type="checkbox"
+            id="left-slide"
+        /><input
+            type="checkbox"
+            id="right-slide"
+        />
 
-<body>
-    <input type="checkbox" id="menu-control" />
+        <header>
+            <div class="logo">
+                <a href="/">
+                    <img
+                        src="https://picsum.photos/id/1060/200/80"
+                        alt="logo"
+                    />
+                </a>
+            </div>
+            <label
+                for="menu-control"
+                class="menu-btn"
+            >
+                <span>選單</span>
+            </label>
+            <nav>
+                <a href="#">About me</a>
+                <a href="#">Header</a>
+                <a href="#">Banner</a>
+                <a href="#">Container</a>
+                <a href="#">Footer</a>
+                <a href="/views/dateCalculate.html">Date calculate</a>
+            </nav>
+        </header>
 
-    <header>
-        <div class="logo">
-            <a href="/">
-                <img src="https://picsum.photos/id/1060/200/80" alt="logo" />
-            </a>
+        <div class="banner">
+            <input
+                type="radio"
+                name="img-control"
+                id="test1"
+                checked
+            />
+            <img src="https://picsum.photos/id/1061/768/150" />
+            <input
+                type="radio"
+                name="img-control"
+                id="test2"
+            />
+            <img src="https://picsum.photos/id/1062/768/150" />
+            <input
+                type="radio"
+                name="img-control"
+                id="test3"
+            />
+            <img src="https://picsum.photos/id/1063/768/150" />
+
+            <div class="img-list">
+                <label for="test1"></label>
+                <label for="test2"></label>
+                <label for="test3"></label>
+            </div>
+            <label
+                for="left-slide"
+                class="left-btn"
+            ></label>
+            <label
+                for="right-slide"
+                class="right-btn"
+            ></label>
         </div>
-        <label for="menu-control" class="menu-btn">
-            <span>選單</span>
-        </label>
-        <nav>
-            <a href="#">About me</a>
-            <a href="#">Header</a>
-            <a href="#">Banner</a>
-            <a href="#">Container</a>
-            <a href="#">Footer</a>
-            <a href="/views/dateCalculate.html">Date calculate</a>
-        </nav>
-    </header>
-
-    <div class="banner"></div>
-    <div class="practice-box"></div>
-    <footer>20240319-7</footer>
-</body>
-
+        <div class="practice-box"></div>
+        <footer>20240319-7</footer>
+    </body>
 </html>

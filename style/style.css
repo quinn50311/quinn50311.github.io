@@ -122,6 +122,165 @@ nav a ~ a {
 
 /* 漢堡選單點選後 End */
 
+.banner {
+    width: 100%;
+    height: auto;
+    min-height: 150px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    display: flex;
+}
+
+.banner img {
+    display: block;
+    z-index: -1;
+    opacity: 1;
+    width: 100%;
+    height: 150px;
+    vertical-align: bottom;
+
+    /* position: absolute;
+    top: 0;
+    left: 0;
+    filter: opacity(0);
+    -webkit-animation: silder 15s linear infinite;
+    animation: silder 15s linear infinite; */
+}
+
+/* .banner img:nth-child(3) {
+    -webkit-animation-delay: 10s;
+    animation-delay: 10s;
+}
+
+.banner img:nth-child(2) {
+    -webkit-animation-delay: 5s;
+    animation-delay: 5s;
+}
+
+.banner img:nth-child(1) {
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
+} */
+
+/*動畫關鍵影格*/
+/* @-webkit-keyframes silder {
+    22% {
+        opacity: 1;
+        filter: opacity(1);
+    }
+    33% {
+        opacity: 1;
+        filter: opacity(1);
+    }
+    44% {
+        opacity: 0;
+        filter: opacity(0);
+    }
+}
+@keyframes silder {
+    22% {
+        opacity: 1;
+        filter: opacity(1);
+    }
+    33% {
+        opacity: 1;
+        filter: opacity(1);
+    }
+    44% {
+        opacity: 0;
+        filter: opacity(0);
+    }
+} */
+
+.banner input[type='radio'] {
+    display: none;
+}
+
+.img-list {
+    display: flex;
+    width: 60px;
+    height: 30px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.img-list label {
+    display: block;
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+.banner input[type='radio']:nth-of-type(1):checked ~ .img-list label:nth-of-type(1) {
+    background-color: #333;
+}
+.banner input[type='radio']:nth-of-type(2):checked ~ .img-list label:nth-of-type(2) {
+    background-color: #333;
+}
+.banner input[type='radio']:nth-of-type(3):checked ~ .img-list label:nth-of-type(3) {
+    background-color: #333;
+}
+
+.banner input[type='radio']:nth-of-type(1):checked ~ img:nth-of-type(1) {
+    transform: translatex(0%);
+}
+
+.banner input[type='radio']:nth-of-type(2):checked ~ img:nth-of-type(2) {
+    transform: translatex(-100%);
+}
+
+.banner input[type='radio']:nth-of-type(3):checked ~ img:nth-of-type(3) {
+    transform: translatex(-200%);
+}
+
+#left-slide,
+#right-slide {
+    display: none;
+}
+
+.left-btn,
+.right-btn {
+    position: absolute;
+    top: 50px;
+}
+
+.left-btn {
+    left: 0;
+}
+
+.right-btn {
+    right: 0;
+}
+
+.left-btn::before,
+.right-btn::before {
+    display: block;
+    width: auto;
+    height: auto;
+    font-size: 30px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.left-btn::before {
+    content: '<';
+}
+
+.left-btn:hover::before,
+.right-btn:hover::before {
+    cursor: pointer;
+}
+
+.right-btn::before {
+    content: '>';
+}
+
 footer {
     width: 100%;
     height: 50px;
