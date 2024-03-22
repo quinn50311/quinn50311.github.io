@@ -123,8 +123,8 @@ nav a ~ a {
 /* 漢堡選單點選後 End */
 
 .banner {
-    width: 375px;
-    max-width: 375px;
+    width: 100%;
+    max-width: 767px;
     height: auto;
     min-height: 150px;
     background-size: cover;
@@ -141,7 +141,6 @@ nav a ~ a {
     opacity: 1;
     width: 100%;
     height: 150px;
-    vertical-align: bottom;
     -webkit-animation: silder 10s infinite;
     animation: silder 10s infinite;
 }
@@ -158,11 +157,11 @@ nav a ~ a {
     }
     25%,
     50% {
-        transform: translateX(-375px);
+        transform: translateX(-100%);
     }
     55%,
     80% {
-        transform: translateX(-750px);
+        transform: translateX(-200%);
     }
     85%,
     100% {
@@ -176,11 +175,11 @@ nav a ~ a {
     }
     25%,
     50% {
-        transform: translateX(-375px);
+        transform: translateX(-100%);
     }
     55%,
     80% {
-        transform: translateX(-750px);
+        transform: translateX(-200%);
     }
     85%,
     100% {
