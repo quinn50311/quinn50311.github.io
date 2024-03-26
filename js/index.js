@@ -1,7 +1,4 @@
-function setBannerImgWidth() {
-    const img1El = document.querySelector('.img-1');
-    const img2El = document.querySelector('.img-2');
-    const img3El = document.querySelector('.img-3');
+function setBannerImgWidth(img1El, img2El, img3El) {
     let img1Src = img1El.getAttribute('src');
     let img2Src = img2El.getAttribute('src');
     let img3Src = img3El.getAttribute('src');
@@ -29,6 +26,21 @@ function setBannerImgWidth() {
     img3El.setAttribute('src', img3Src);
 }
 
+// function doImgShift(side) {
+
+// }
+
 (function () {
-    window.addEventListener('resize', setBannerImgWidth);
+    // const leftImgEl = document.querySelector('.left-btn');
+    // const rightImgEl = document.querySelector('.right-btn');
+    // const imgBtn1El = document.querySelector('.img-btn-1');
+    // const imgBtn2El = document.querySelector('.img-btn-2');
+    // const imgBtn3El = document.querySelector('.img-btn-3');
+    const img1El = document.querySelector('.img-1');
+    const img2El = document.querySelector('.img-2');
+    const img3El = document.querySelector('.img-3');
+
+    window.addEventListener('resize', function () {
+        setBannerImgWidth(img1El, img2El, img3El);
+    });
 })();
