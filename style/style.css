@@ -1,3 +1,10 @@
+html,body {
+    position: relative;
+    max-width: 1920px;
+    min-height: calc(100vh + 50px);
+    margin: auto;
+}
+
 header {
     width: 100%;
     height: 100px;
@@ -91,7 +98,7 @@ nav a {
 
 nav a:hover {
     color: rgb(153, 153, 42);
-    font-weight: 700;
+    font-weight: 900;
 }
 
 nav a ~ a {
@@ -124,9 +131,6 @@ nav a ~ a {
 
 .banner {
     width: 100%;
-    max-width: 767px;
-    height: auto;
-    min-height: 150px;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -140,12 +144,11 @@ nav a ~ a {
     z-index: -1;
     opacity: 1;
     width: 100%;
-    height: 150px;
     -webkit-animation: silder 10s infinite;
     animation: silder 10s infinite;
 }
 
-.banner:hover img {
+.banner:hover img, .banner:hover .img-list label {
     animation: none;
 }
 
@@ -187,6 +190,61 @@ nav a ~ a {
     }
 }
 
+@keyframes check {
+    0%,
+    20% {
+        background-color: #333;
+    }
+    25%,
+    50% {
+        background-color: #fff;
+    }
+    55%,
+    80% {
+        background-color: #fff;
+    }
+    85%,
+    100% {
+        background-color: #333;
+    }
+}
+@keyframes check1 {
+    0%,
+    20% {
+        background-color: #fff;
+    }
+    25%,
+    50% {
+        background-color: #333;
+    }
+    55%,
+    80% {
+        background-color: #fff;
+    }
+    85%,
+    100% {
+        background-color: #fff;
+    }
+}
+@keyframes check2 {
+    0%,
+    20% {
+        background-color: #fff;
+    }
+    25%,
+    50% {
+        background-color: #fff;
+    }
+    55%,
+    80% {
+        background-color: #333;
+    }
+    85%,
+    100% {
+        background-color: #fff;
+    }
+}
+
 .banner input[type='radio'] {
     display: none;
 }
@@ -194,7 +252,7 @@ nav a ~ a {
 .img-list {
     display: flex;
     width: 60px;
-    height: 30px;
+    height: 20px;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -209,6 +267,18 @@ nav a ~ a {
     margin: 0 5px;
     border-radius: 50%;
     background-color: #fff;
+}
+
+.img-list label:nth-of-type(1) {
+    animation: check 10s infinite;
+}
+
+.img-list label:nth-of-type(2) {
+    animation: check1 10s infinite;
+}
+
+.img-list label:nth-of-type(3) {
+    animation: check2 10s infinite;
 }
 
 .banner input[type='radio']:nth-of-type(1):checked ~ .img-list label:nth-of-type(1) {
@@ -246,40 +316,35 @@ nav a ~ a {
     display: none;
 }
 
-.left-btn,
-.right-btn {
-    position: absolute;
-    top: 50px;
+.container {
+    width: 100%;
+    /* background-color: #eee; */
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
 }
 
-.left-btn {
-    left: 0;
+.container .item {
+    width: 100%;
+    height: 360px;
+    margin: auto;
+    margin-bottom: 30px;
+    padding: 30px 60px;
+    border: 1px double #aaa;
+    background: linear-gradient(45deg, #fdc 0%, #fcc 50%, #fbc 100%);
+    box-sizing: border-box;
 }
 
-.right-btn {
-    right: 0;
+.item .title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
 }
 
-.left-btn::before,
-.right-btn::before {
-    display: block;
-    width: auto;
-    height: auto;
-    font-size: 30px;
-    color: rgba(0, 0, 0, 0.5);
-}
-
-.left-btn::before {
-    content: '<';
-}
-
-.left-btn:hover::before,
-.right-btn:hover::before {
-    cursor: pointer;
-}
-
-.right-btn::before {
-    content: '>';
+.item .text {
+    font-size: 18px;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
 }
 
 footer {
@@ -288,6 +353,8 @@ footer {
     line-height: 50px;
     text-align: center;
     background-color: #fff;
+    position: absolute;
+    bottom: 0;
 }
 
 @media screen and (min-width: 768px) {
@@ -325,11 +392,46 @@ footer {
     nav a ~ a {
         margin-top: 0;
     }
+
+    .banner {
+        max-width: 1090px;
+    }
+
+    .container {
+        width: 100%;
+        padding-top: 30px;
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .container .item {
+        width: 31%;
+        min-height: 450px;
+        margin: auto;
+        margin-bottom: 0;
+        padding: 20px 30px;
+        background-color: #ccc;
+        box-sizing: border-box;
+    }
 }
 
 @media screen and (min-width: 1090px) {
     nav a {
         padding: 0 30px;
+    }
+
+    .banner {
+        max-width: 1400px;
+    }
+
+    .img-list {
+        width: calc(1rem + 60px);
+        height: 30px;
+    }
+
+    .img-list label {
+        width: calc(.2rem + 10px);
+        height: calc(.2rem + 10px);
     }
 }
 
@@ -337,5 +439,47 @@ footer {
     nav a {
         padding: 0 50px;
         font-size: 20px;
+    }
+
+    .banner {
+        max-width: 1920px;
+    }
+
+    .img-list {
+        width: calc(1.5rem + 60px);
+        height: calc(1rem + 30px);
+    }
+
+    .img-list label {
+        width: calc(.5rem + 10px);
+        height: calc(.5rem + 10px);
+    }
+
+    .container .item {
+        padding: 50px 60px;
+        min-height: 500px;
+    }
+
+    .item .title {
+        font-size: 36px;
+        font-weight: 700;
+        margin-bottom: 30px;
+    }
+    
+    .item .text {
+        font-size: 24px;
+        letter-spacing: 1px;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .img-list {
+        width: calc(3rem + 60px);
+        height: calc(1rem + 30px);
+    }
+    
+    .img-list label {
+        width: calc(1rem + 10px);
+        height: calc(1rem + 10px);
     }
 }

@@ -5,8 +5,10 @@ nav {
 }
 
 .container {
+    display: block;
     width: 100%;
     margin: auto;
+    padding-top: 0;
     background-image: url('/assets/calc-background1.jpg');
     background-size: cover;
     background-repeat: no-repeat;
