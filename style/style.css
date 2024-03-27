@@ -131,7 +131,7 @@ nav a ~ a {
 /* 漢堡選單點選後 End */
 
 .banner {
-    width: 100%;
+    width: auto;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -145,8 +145,8 @@ nav a ~ a {
     z-index: -1;
     opacity: 1;
     width: 100%;
-    -webkit-animation: silder 10s infinite;
-    animation: silder 10s infinite;
+    -webkit-animation: slider 10s infinite;
+    animation: slider 10s infinite;
 }
 
 .banner:hover img,
@@ -155,7 +155,7 @@ nav a ~ a {
 }
 
 /*動畫關鍵影格*/
-@-webkit-keyframes silder {
+@-webkit-keyframes slider {
     0%,
     20% {
         transform: translateX(0px);
@@ -173,7 +173,7 @@ nav a ~ a {
         transform: translateX(0px);
     }
 }
-@keyframes silder {
+@keyframes slider {
     0%,
     20% {
         transform: translateX(0px);

@@ -1,7 +1,6 @@
 (function () {
     window.addEventListener('orientationchange', function (e) {
-        console.log(this.document.body.clientWidth, e.target.screen.width);
-        this.document.body.width = e.target.screen.width;
-        console.log(this.document.body.width, this.document.body.clientWidth);
+        this.document.querySelector('.img-1').style.width = e.target.screen.width + 'px';
+        console.log(this.document.querySelector('.img-1').style.width);
     });
 })();
