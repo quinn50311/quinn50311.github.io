@@ -1,70 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        />
+        <link
+            rel="stylesheet"
+            href="./style/reset.css"
+        />
+        <link
+            rel="stylesheet"
+            href="./style/style.css"
+        />
+        <script
+            src="/js/index.js"
+            defer
+        ></script>
+        <title>我的練習紀錄</title>
+    </head>
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style/reset.css" />
-    <link rel="stylesheet" href="./style/style.css" />
-    <script src="/js/index.js" defer></script>
-    <title>我的練習紀錄</title>
-</head>
+    <body>
+        <input
+            type="checkbox"
+            id="menu-control"
+        />
+        <input
+            type="checkbox"
+            id="left-slide"
+        /><input
+            type="checkbox"
+            id="right-slide"
+        />
 
-<body>
-    <input type="checkbox" id="menu-control" />
-    <input type="checkbox" id="left-slide" /><input type="checkbox" id="right-slide" />
+        <header>
+            <div class="logo">
+                <a href="/">
+                    <img
+                        src="/assets/logo.jpg"
+                        alt="logo"
+                    />
+                </a>
+            </div>
+            <label
+                for="menu-control"
+                class="menu-btn"
+            >
+                <span>選單</span>
+            </label>
+            <nav>
+                <a href="#">About me</a>
+                <a href="#">Header</a>
+                <a href="#">Banner</a>
+                <a href="#">Container</a>
+                <a href="#">Footer</a>
+                <a href="/views/dateCalculate.html">Date calculate</a>
+            </nav>
+        </header>
 
-    <header>
-        <div class="logo">
-            <a href="/">
-                <img src="https://picsum.photos/id/1060/200/80" alt="logo" />
-            </a>
+        <div class="banner">
+            <input
+                type="radio"
+                name="img-control"
+                id="img1"
+                checked
+            />
+            <input
+                type="radio"
+                name="img-control"
+                id="img2"
+            />
+            <input
+                type="radio"
+                name="img-control"
+                id="img3"
+            />
+
+            <img
+                class="img-1"
+                src="/assets/banner1.jpg"
+            />
+            <img
+                class="img-2"
+                src="/assets/banner2.jpg"
+            />
+            <img
+                class="img-3"
+                src="/assets/banner3.jpg"
+            />
+
+            <div class="img-list">
+                <label
+                    class="img-btn-1"
+                    for="img1"
+                ></label>
+                <label
+                    class="img-btn-2"
+                    for="img2"
+                ></label>
+                <label
+                    class="img-btn-3"
+                    for="img3"
+                ></label>
+            </div>
         </div>
-        <label for="menu-control" class="menu-btn">
-            <span>選單</span>
-        </label>
-        <nav>
-            <a href="#">About me</a>
-            <a href="#">Header</a>
-            <a href="#">Banner</a>
-            <a href="#">Container</a>
-            <a href="#">Footer</a>
-            <a href="/views/dateCalculate.html">Date calculate</a>
-        </nav>
-    </header>
-
-    <div class="banner">
-        <input type="radio" name="img-control" id="img1" checked />
-        <input type="radio" name="img-control" id="img2" />
-        <input type="radio" name="img-control" id="img3" />
-
-        <img class="img-1" src="https://picsum.photos/id/1061/1920/450" />
-        <img class="img-2" src="https://picsum.photos/id/1062/1920/450" />
-        <img class="img-3" src="https://picsum.photos/id/1063/1920/450" />
-
-        <div class="img-list">
-            <label class="img-btn-1" for="img1"></label>
-            <label class="img-btn-2" for="img2"></label>
-            <label class="img-btn-3" for="img3"></label>
+        <div class="container">
+            <div class="item">
+                <div class="title">為什麼做這個？</div>
+                <div class="text">因為身為一個前端工程師卻沒有作品可以給其他人看，所以乾脆做一個來試試。</div>
+            </div>
+            <div class="item">
+                <div class="title">會用到的技術？</div>
+                <div class="text">只使用純HTML、CSS、JavaScript，順便練習一下基本功。</div>
+            </div>
+            <div class="item">
+                <div class="title">因為前面字太少所以用假文代替這部分</div>
+                <div class="text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem atque suscipit ratione temporibus
+                    quibusdam, dicta, adipisci numquam exercitationem tempore error ducimus excepturi id non nesciunt
+                    repellendus aut maxime architecto eos!
+                </div>
+            </div>
         </div>
-    </div>
-    <div class="container">
-        <div class="item">
-            <div class="title">為什麼做這個？</div>
-            <div class="text">因為身為一個前端工程師卻沒有作品可以給其他人看，所以乾脆做一個來試試。</div>
-        </div>
-        <div class="item">
-            <div class="title">會用到的技術？</div>
-            <div class="text">只使用純HTML、CSS、JavaScript，順便練習一下基本功。</div>
-        </div>
-        <div class="item">
-            <div class="title">因為前面字太少所以用假文代替這部分</div>
-            <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem atque suscipit ratione
-                temporibus quibusdam, dicta, adipisci numquam exercitationem tempore error ducimus excepturi id non
-                nesciunt repellendus aut maxime architecto eos!</div>
-        </div>
-    </div>
-    <footer>20240326-2</footer>
-</body>
-
+        <footer>20240326-2</footer>
+    </body>
 </html>

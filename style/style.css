@@ -1,4 +1,5 @@
-html,body {
+html,
+body {
     position: relative;
     max-width: 1920px;
     min-height: calc(100vh + 50px);
@@ -148,7 +149,8 @@ nav a ~ a {
     animation: silder 10s infinite;
 }
 
-.banner:hover img, .banner:hover .img-list label {
+.banner:hover img,
+.banner:hover .img-list label {
     animation: none;
 }
 
@@ -403,7 +405,7 @@ footer {
         display: flex;
         flex-direction: row;
     }
-    
+
     .container .item {
         width: 31%;
         min-height: 450px;
@@ -430,8 +432,8 @@ footer {
     }
 
     .img-list label {
-        width: calc(.2rem + 10px);
-        height: calc(.2rem + 10px);
+        width: calc(0.2rem + 10px);
+        height: calc(0.2rem + 10px);
     }
 }
 
@@ -451,8 +453,8 @@ footer {
     }
 
     .img-list label {
-        width: calc(.5rem + 10px);
-        height: calc(.5rem + 10px);
+        width: calc(0.5rem + 10px);
+        height: calc(0.5rem + 10px);
     }
 
     .container .item {
@@ -465,7 +467,7 @@ footer {
         font-weight: 700;
         margin-bottom: 30px;
     }
-    
+
     .item .text {
         font-size: 24px;
         letter-spacing: 1px;
@@ -477,7 +479,7 @@ footer {
         width: calc(3rem + 60px);
         height: calc(1rem + 30px);
     }
-    
+
     .img-list label {
         width: calc(1rem + 10px);
         height: calc(1rem + 10px);
