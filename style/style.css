@@ -158,37 +158,37 @@ nav a ~ a {
 @-webkit-keyframes silder {
     0%,
     20% {
-        transform-origin: translateX(0px);
+        transform: translateX(0px);
     }
     25%,
     50% {
-        transform-origin: translateX(-100%);
+        transform: translateX(-100%);
     }
     55%,
     80% {
-        transform-origin: translateX(-200%);
+        transform: translateX(-200%);
     }
     85%,
     100% {
-        transform-origin: translateX(0px);
+        transform: translateX(0px);
     }
 }
 @keyframes silder {
     0%,
     20% {
-        transform-origin: translateX(0px);
+        transform: translateX(0px);
     }
     25%,
     50% {
-        transform-origin: translateX(-100%);
+        transform: translateX(-100%);
     }
     55%,
     80% {
-        transform-origin: translateX(-200%);
+        transform: translateX(-200%);
     }
     85%,
     100% {
-        transform-origin: translateX(0px);
+        transform: translateX(0px);
     }
 }
 
