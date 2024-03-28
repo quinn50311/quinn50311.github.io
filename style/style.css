@@ -95,7 +95,6 @@ html,
 body {
     position: relative;
     max-width: 1920px;
-    min-height: calc(100vh + 50px);
     margin: auto;
 }
 
@@ -313,38 +312,48 @@ nav a ~ a {
     transition: 0.5s ease;
 }
 
-#left-slide,
-#right-slide {
-    display: none;
-}
-
 .container {
     width: 100%;
-    padding-top: 30px;
+    padding: 30px 0;
     display: flex;
     flex-direction: column;
 }
 
-.container .item {
-    width: 100%;
-    height: 360px;
+.card {
+    width: 90%;
+    height: 380px;
     margin: auto;
     margin-bottom: 30px;
-    padding: 30px 60px;
-    border: 1px double #aaa;
-    background: linear-gradient(45deg, #fdc 0%, #fcc 50%, #fbc 100%);
+    border: 3px double #aaa;
+    border-radius: 5px;
     box-sizing: border-box;
 }
 
-.item .title {
-    font-size: 24px;
+.card .pic {
+    height: 160px;
+}
+
+.pic img {
+    width: 100%;
+    height: 100%;
+    vertical-align: bottom;
+}
+
+.card .txt {
+    padding: 20px 30px;
+    height: 174px;
+    background: linear-gradient(45deg, #eee 0%, #ddd 50%, #bbb 100%);
+}
+
+.title {
+    display: block;
+    font-size: 20px;
     font-weight: 700;
     margin-bottom: 20px;
 }
 
-.item .text {
-    font-size: 18px;
-    margin-bottom: 10px;
+.text {
+    font-size: 16px;
     letter-spacing: 1px;
 }
 
@@ -353,9 +362,10 @@ footer {
     height: 50px;
     line-height: 50px;
     text-align: center;
-    background-color: #fff;
+    color: #fff;
+    background-color: #000;
     position: absolute;
-    bottom: 0;
+    bottom: -50px;
 }
 
 @media screen and (min-width: 768px) {
@@ -399,20 +409,26 @@ footer {
     }
 
     .container {
-        width: 100%;
-        padding-top: 30px;
-        display: flex;
         flex-direction: row;
+        flex-wrap: wrap;
     }
 
-    .container .item {
-        width: 31%;
-        min-height: 450px;
-        margin: auto;
+    .card {
+        width: 48%;
+        height: auto;
         margin-bottom: 0;
-        padding: 20px 30px;
-        background-color: #ccc;
-        box-sizing: border-box;
+    }
+
+    .card:nth-child(3) {
+        margin-left: 1%;
+    }
+
+    .card .pic {
+        height: 50%;
+    }
+
+    .card .txt {
+        height: calc(50% - 40px);
     }
 }
 
@@ -433,6 +449,30 @@ footer {
     .img-list label {
         width: calc(0.2rem + 10px);
         height: calc(0.2rem + 10px);
+    }
+
+    .container {
+        flex-wrap: nowrap;
+    }
+
+    .card {
+        width: 31%;
+        height: auto;
+        margin-bottom: 0;
+    }
+
+    .card .pic {
+        max-height: 50%;
+    }
+
+    .pic img {
+        width: 100%;
+        height: 100%;
+        vertical-align: bottom;
+    }
+
+    .card .txt {
+        height: calc(50% - 40px);
     }
 }
 
@@ -456,18 +496,18 @@ footer {
         height: calc(0.5rem + 10px);
     }
 
-    .container .item {
+    .container .card {
         padding: 50px 60px;
         min-height: 500px;
     }
 
-    .item .title {
+    .card .title {
         font-size: 36px;
         font-weight: 700;
         margin-bottom: 30px;
     }
 
-    .item .text {
+    .card .text {
         font-size: 24px;
         letter-spacing: 1px;
     }
