@@ -1,3 +1,96 @@
+/*動畫關鍵影格*/
+@-webkit-keyframes slider {
+    0%,
+    20% {
+        transform: translateX(0%);
+    }
+    25%,
+    50% {
+        transform: translateX(-100%);
+    }
+    55%,
+    80% {
+        transform: translateX(-200%);
+    }
+    85%,
+    100% {
+        transform: translateX(0%);
+    }
+}
+@keyframes slider {
+    0%,
+    20% {
+        transform: translateX(0%);
+    }
+    25%,
+    50% {
+        transform: translateX(-100%);
+    }
+    55%,
+    80% {
+        transform: translateX(-200%);
+    }
+    85%,
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes check {
+    0%,
+    20% {
+        background-color: #333;
+    }
+    25%,
+    50% {
+        background-color: #fff;
+    }
+    55%,
+    80% {
+        background-color: #fff;
+    }
+    85%,
+    100% {
+        background-color: #333;
+    }
+}
+@keyframes check1 {
+    0%,
+    20% {
+        background-color: #fff;
+    }
+    25%,
+    50% {
+        background-color: #333;
+    }
+    55%,
+    80% {
+        background-color: #fff;
+    }
+    85%,
+    100% {
+        background-color: #fff;
+    }
+}
+@keyframes check2 {
+    0%,
+    20% {
+        background-color: #fff;
+    }
+    25%,
+    50% {
+        background-color: #fff;
+    }
+    55%,
+    80% {
+        background-color: #333;
+    }
+    85%,
+    100% {
+        background-color: #fff;
+    }
+}
+
 html,
 body {
     position: relative;
@@ -152,99 +245,6 @@ nav a ~ a {
 .banner:hover img,
 .banner:hover .img-list label {
     animation: none;
-}
-
-/*動畫關鍵影格*/
-@-webkit-keyframes slider {
-    0%,
-    20% {
-        transform: translateX(0%);
-    }
-    25%,
-    50% {
-        transform: translateX(-100%);
-    }
-    55%,
-    80% {
-        transform: translateX(-200%);
-    }
-    85%,
-    100% {
-        transform: translateX(0%);
-    }
-}
-@keyframes slider {
-    0%,
-    20% {
-        transform: translateX(0%);
-    }
-    25%,
-    50% {
-        transform: translateX(-100%);
-    }
-    55%,
-    80% {
-        transform: translateX(-200%);
-    }
-    85%,
-    100% {
-        transform: translateX(0%);
-    }
-}
-
-@keyframes check {
-    0%,
-    20% {
-        background-color: #333;
-    }
-    25%,
-    50% {
-        background-color: #fff;
-    }
-    55%,
-    80% {
-        background-color: #fff;
-    }
-    85%,
-    100% {
-        background-color: #333;
-    }
-}
-@keyframes check1 {
-    0%,
-    20% {
-        background-color: #fff;
-    }
-    25%,
-    50% {
-        background-color: #333;
-    }
-    55%,
-    80% {
-        background-color: #fff;
-    }
-    85%,
-    100% {
-        background-color: #fff;
-    }
-}
-@keyframes check2 {
-    0%,
-    20% {
-        background-color: #fff;
-    }
-    25%,
-    50% {
-        background-color: #fff;
-    }
-    55%,
-    80% {
-        background-color: #333;
-    }
-    85%,
-    100% {
-        background-color: #fff;
-    }
 }
 
 .banner input[type='radio'] {
