@@ -320,7 +320,6 @@ nav a ~ a {
 
 .container {
     width: 100%;
-    /* background-color: #eee; */
     padding-top: 30px;
     display: flex;
     flex-direction: column;
@@ -417,7 +416,7 @@ footer {
     }
 }
 
-@media screen and (min-width: 1090px) {
+@media screen and (min-width: 1024px) {
     nav a {
         padding: 0 30px;
     }
@@ -437,7 +436,7 @@ footer {
     }
 }
 
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1366px) {
     nav a {
         padding: 0 50px;
         font-size: 20px;
@@ -472,6 +471,9 @@ footer {
         font-size: 24px;
         letter-spacing: 1px;
     }
+}
+
+@media screen and (min-width: 1440px) {
 }
 
 @media screen and (min-width: 1920px) {
