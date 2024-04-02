@@ -320,9 +320,9 @@ nav a ~ a {
     flex-direction: column;
 }
 
-.card {
+.container .card {
     width: 90%;
-    height: 380px;
+    height: 540px;
     margin: auto;
     margin-bottom: 30px;
     border: 3px double #aaa;
