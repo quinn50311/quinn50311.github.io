@@ -11,44 +11,54 @@
         ),
         url('/assets/banner4.jpg') center / 100% 100%;
     background-attachment: fixed;
-    height: 500px;
+    min-height: 35rem;
+    max-height: 42rem;
 }
 
 .aboutme-wrap {
     width: 80%;
     margin: auto;
-    margin-top: 10%;
+    margin-top: 20%;
+    color: #666;
+}
+
+.aboutme-wrap label + label {
+    margin-top: 1rem;
 }
 
 .aboutme-wrap .my-name {
     display: block;
-    font-size: 40px;
+    font-size: 2.5rem;
     font-weight: 1000;
 }
 
 .aboutme-wrap .my-profession {
     display: block;
-    margin-top: 20px;
-    font-size: 14px;
+    font-size: 1rem;
     font-weight: bold;
-    letter-spacing: 2px;
+    letter-spacing: 0.2rem;
 }
 
 .container {
-    background-color: rgba(238, 238, 255, 0.3);
+    /* background-color: rgba(238, 238, 255, 0.3); */
+    background-color: fff;
+    padding: 3rem 0;
 }
 
 .container .card {
     position: relative;
-    height: 300px;
-    margin-bottom: 10px;
+    height: 25rem;
+    margin-bottom: 0.9rem;
     border: none;
-    box-shadow: 0 0 5px 1px #ccc;
+    box-shadow: 0 0 0.5rem 0.1rem #ccc;
 }
 
 .container .wrap {
     background-color: #fff;
-    padding: 13% 0;
+}
+
+.container .wrap .card + .card {
+    margin-top: 3rem;
 }
 
 .card .pic {
@@ -71,7 +81,7 @@
 }
 
 .inner-txt .title {
-    font-size: 36px;
+    font-size: 3rem;
     font-weight: 700;
     font-style: italic;
     margin-bottom: 3%;
@@ -82,14 +92,36 @@
 }
 
 @media screen and (min-width: 768px) {
+    .aboutme-wrap {
+        margin-top: 10%;
+    }
+
+    .container {
+        padding-bottom: 3rem;
+    }
+
+    .container .wrap {
+        display: flex;
+        padding: 0 1rem;
+    }
+
+    .container .wrap .card + .card {
+        margin-top: 0em;
+    }
+
     .container .card:nth-child(3) {
-        height: 300px;
+        height: 25rem;
     }
 }
 
 @media screen and (min-width: 1366px) {
+    .container {
+        display: flex;
+        justify-content: center;
+    }
+
     .container .card {
-        min-height: 300px;
-        height: 300px;
+        min-height: 25rem;
+        height: 25rem;
     }
 }
